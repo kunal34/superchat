@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "build/superchat",
     "ignore": [
       "firebase.json",
       "**/.*",
