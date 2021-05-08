@@ -4,24 +4,23 @@ import './App.css';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-
+import 'firebase/analytics';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
   apiKey: "AIzaSyB1c8e3ui4warBgH6p7QabILDKgfQQD-_g",
-    authDomain: "superchat-f7a51.firebaseapp.com",
-    projectId: "superchat-f7a51",
-    storageBucket: "superchat-f7a51.appspot.com",
-    messagingSenderId: "1004145366530",
-    appId: "1:1004145366530:web:48a5b9625cf1b7ec9db91b"
-
+  authDomain: "superchat-f7a51.firebaseapp.com",
+  projectId: "superchat-f7a51",
+  storageBucket: "superchat-f7a51.appspot.com",
+  messagingSenderId: "1004145366530",
+  appId: "1:1004145366530:web:48a5b9625cf1b7ec9db91b"
 })
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-
+const analytics = firebase.analytics();
 
 
 function App() {
@@ -31,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Chatapp</h1>
+        <h1>ChatApp🔥💬</h1>
         <SignOut />
       </header>
 
@@ -53,7 +52,7 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p > Do not violate the community guidelines or you will be banned for life!</p>
+      <p id="para">Welcome to Superchatapp | Chat with anyone around the world </p>
     </>
   )
 
@@ -105,7 +104,7 @@ function ChatRoom() {
 
       <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
 
-      <button type="submit" disabled={!formValue}>send</button>
+      <button type="submit" disabled={!formValue}>Send</button>
 
     </form>
   </>)
@@ -119,7 +118,7 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="userimage" />
+      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
       <p>{text}</p>
     </div>
   </>)

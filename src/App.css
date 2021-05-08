@@ -101,12 +101,13 @@ button:disabled {
 
 
 .sign-in {
-  color: #282c34;
+  color: #e71f1f;
   background: white;
   max-width: 400px;
   margin: 0 auto;
-  
 }
+
+
 
 
 ul, li {
@@ -119,6 +120,17 @@ p {
   margin-bottom: 12px;
   line-height: 24px;
   padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+#para{
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 130px;
   border-radius: 25px;
   position: relative;
   color: white;
@@ -151,3 +163,4 @@ img {
   border-radius: 50%;
   margin: 2px 5px;
 }
+
